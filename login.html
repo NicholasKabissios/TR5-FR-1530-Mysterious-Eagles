@@ -41,57 +41,37 @@
 
 	<div id="content">
 
-<!--
-		<div class="divider1"></div>
--->
-
-
 		<!-- Primary content: Stuff that goes in the primary content column (by default, the left column) -->
 		<div id="primarycontainer">
 			<div id="primarycontent">
+		
+			<form action="action_page.php">
+			<h3>Log In</h3>
+			<br></br>
+
+			<div><label for="email">Email</label></div>
+			<div><input type="text" id="email" name="email" pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="Enter email..." required /><br />
+				<!-- <div class='error'>Email is incorrect.</div> -->
+			</div>
+			<br></br>
+
+			<div><label for="pword">Password</label></div>
+			<div><input type="password" id="pword" name="pword" minlength ="8" placeholder="Enter password..." required /><br />
+				<!-- <div class='error'>Password is incorrect.</div> -->
+			</div>
+			<br></br>
+
+			<input type="submit" value="Log In"/>
+			<br></br>
+
+			<p>If you don't already have an account: <a href="signup.html">Sign Up</a></p>
+		</form>
+
 				<!-- Primary content area start -->
-
-				<div class="post">
-					<div class="contentarea">
-						<div class="details">Posted by <a href="#">Jane Doe</a> - Location</div> <!-- we will link location the way name is linked -->
-            <!-- inset like button here
-                insert star rating here -->
-						<p>Volutpat at varius sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis. Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor. Aenean felis. Quisque eros. Cras lobortis commodo metus. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet.</p>
-					</div>
-				</div>
-
-				<div class="divider2"></div>
-
-				<div class="post">
-					<div class="contentarea">
-						<div class="details">Posted by <a href="#">Jane Doe</a> - Location</div>
-						<p>Aenean felis quisque eros. Cras lobortis commodo lorem ipsum dolor. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Lorem ipsum dolor sit amet consequat etiam sed dolore.</p>
-					</div>
-				</div>
-
-				<div class="divider2"></div>
-
-				<div class="post">
-					<div class="contentarea">
-						<div class="details">Posted by <a href="#">Jane Doe</a> - Location</div>
-						<p>Eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet felis quisque eros. Cras lobortis commodo lorem ipsum dolor. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit lorem ipsum dolor.</p>
-					</div>
-				</div>
 
 				<!-- Primary content area end -->
 			</div>
 		</div>
-
-
-		<!-- Secondary content: Stuff that goes in the secondary content column (by default, the narrower right column) -->
-		<div id="secondarycontent">
-			<!-- Secondary content area start
-              this content is to the right, will we be using this? implemented for now in case. Can use it to display something?
-               can delete later -->
-
-			<!-- Secondary content area end -->
-		</div>
-
 
 	</div>
 

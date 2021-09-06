@@ -259,7 +259,8 @@ margin-bottom: 1.5em;
 
 #content
 {
-padding: 0em 2.0em 0em 2.0em;
+/* padding: 0em 2.0em 0em 2.0em; */
+padding: 20px 20px 20px 300px; /* center padding */
 }
 
 #primarycontainer
@@ -272,13 +273,61 @@ width: 100%;
 #primarycontent
 {
 margin: 1.5em 22.0em 0em 0em;
+font-size: 15px;
 }
+
+/*
+not needed right now but there in case you want it
+The space to the right of the website
+IDK how to get rid of the spacing border tho i thought deleting it would do that lol
 
 #secondarycontent
 {
 margin-top: 1.5em;
+margin-left: 22.0em;
 float: right;
 width: 18.0em;
+}
+*/
+
+#logincontainer
+{
+  margin-top: 1.5em;
+  float: middle;
+  width: 20.0em;
+}
+
+
+/*
+old text area code
+textarea {
+  resize: none;
+}
+*/ 
+
+/*
+other button code in case
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+*/
+
+input[type=submit] {
+  background-color: rgb(147, 197, 114);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(147, 197, 114, 0.8);
 }
 
 #footer

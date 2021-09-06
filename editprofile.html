@@ -48,35 +48,42 @@
 			<div id="primarycontainer">
 				<div id="primarycontent">
 					<!-- Primary content area start -->
-					<h3>My Profile</h3><br></br>
+					<h3>Edit Profile</h3><br></br>
 
-						<!-- profile div area start -->
 						<!-- profile pic to left of text? -->
 
 						<div>
-							Username: johnDoe24
-						</div><br></br>
+                            Username:
+                            <br></br>
+                            <!-- or alternatively you can use this: <br></br><textarea class="profileinput" name="profileinput" rows="1" cols="30">Enter new username...</textarea> -->
+                            <div><input type="text" class="username" name="username" placeholder="Enter username..." /></div>
+                            </div><br></br>
 
-						<div>
-							Name:
-						</div><br></br>
+                            <div>
+                                Name:
+                                <br></br>
+                                <div><input type="text" class="newname" name="newname" placeholder="Enter name..." /></div>
+                            </div><br></br>
 
-						<div>
-							Email:
-						</div><br></br>
+                            <div>
+                                Email:
+                                <br></br>
+                                <div><input type="text" class="newemail" name="newemail" placeholder="Enter email..." /></div>
+                            </div><br></br>
 
-						<div>
-							Bio:
-						</div><br></br>
+                            <div>
+                                Bio:
+                                <br></br>
+                                <div><input type="text" class="newbio" name="newbio" placeholder="Write bio..." /></div>
+                            </div><br></br>
 
+                            <!-- button -->
+                            <!--<a href="https://google.com" class="button">Go to Google</a> -->
 
-						<!-- button -->
-						<!--<a href="https://google.com" class="button">Go to Google</a> -->
-
-						<form method="GET" action="editprofile.html">
-							<input type="submit" value="Edit Profile">
-						</form>
-						<br></br>
+                            <form method="GET" action="account.html"> <!-- link to database, update account info on account page -->
+                                <input type="submit" value="Save">
+                            </form>
+							<br></br>
 
 					<!-- Primary content area end -->
 				</div>
