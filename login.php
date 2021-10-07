@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('BASEPATH', TRUE);
 require 'connect.php';
 
@@ -26,10 +27,9 @@ if (isset($_POST['submit'])) {
 		$validPassword = password_verify($passwordAttempt, $user['Password']);
 
 		if ($passwordAttempt == $user['Password']) {
-
-
+			session_start();
 			$_SESSION['USERS'] = $email;
-			echo '<script>window.location.replace("index.html");</script>';
+			echo '<script>window.location.replace("index.php");</script>';
 			exit;
 		}
 	}
@@ -56,27 +56,44 @@ if (isset($_POST['submit'])) {
 	<div id="outer">
 
 
-		<div id="header">
-			<div id="headercontent">
-				<img src="images/logo.jpg" class="left" alt="Earth cartoon with foodie planet written on it" />
-				<h1>Foodie Planet</h1>
-				<h2>A place to share all the great food locations you enjoy!</h2>
-			</div>
+	<div id="header">
+		<div id="headercontent">
+      <img src="images/logo.jpg" class="left" alt="Earth cartoon with foodie planet written on it" />
+			<h1>Foodie Planet</h1>
+			<h2>A place to share all the great food locations you enjoy!</h2>
 		</div>
 
 
-		<div id="menu">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="map.html">Map</a></li>
-				<li><a href="#">New Post</a></li>
-				<li><a href="account.html">Account</a></li>
-				<li><a href="help.html">Help</a></li>
-				<li><a href="login.php" class="active">Log In</a></li>
-				<li><a href="signup.php">Sign Up</a></li>
-			</ul>
+		<div id="login-info">
+
+		<?php 
+		if (!isset($_SESSION['USERS']))
+		{
+			echo "Not logged in.";
+		} else {
+			echo $_SESSION['USERS']; 
+		}
+		?>
+
+		<a id="menu" href="logout.php" <?php if(!isset($_SESSION['USERS'])){echo " style='display: none'"; }?>>Logout</a>
+
 		</div>
-		<div id="menubottom"></div> <!-- border between nav bar and content, very small, 2px approx -->
+
+	</div>
+
+
+	<div id="menu">
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="map.html">Map</a></li>
+			<li><a href="#">New Post</a></li>
+			<li><a href="account.html">Account</a></li>
+            <li><a href="help.php">Help</a></li>
+			<li><a href="login.php" class="active">Log In</a></li>
+			<li><a href="signup.php">Sign Up</a></li>
+		</ul>
+	</div>
+	<div id="menubottom"></div> <!-- border between nav bar and content, very small, 2px approx -->
 
 		<!-- CODE registraion - sign up
     code log in elements -->
