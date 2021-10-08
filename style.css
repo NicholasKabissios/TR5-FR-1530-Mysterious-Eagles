@@ -1,0 +1,195 @@
+
+*
+{
+padding: 0em;
+margin: 0em;
+box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body /* background colour - bottom */
+{
+  background-color: #FFFFFF;
+  margin: 0;
+}
+
+.content {
+  width: 1000px;
+  margin: 0 auto;
+}
+.content h2 {
+  margin: 0;
+  padding: 25px 0;
+  font-size: 22px;
+  border-bottom: 1px solid #ebebeb;
+  color: #666666;
+}
+
+img.logo
+{
+float: left;
+padding: 20px;
+margin: 0em 1.8em 1.4em 0em;
+}
+
+/* this is what has the title in the right place do not remove */
+img.left
+{
+position: relative;
+float: left;
+margin: 0em 1.8em 1.4em 0em;
+}
+
+img.right
+{
+position: relative;
+float: right;
+margin: 0em 0em 1.8em 1.8em;
+}
+
+.divider2 /* the divider between posts */
+{
+position: relative;
+height: 1px;
+border-bottom: solid 2px #b4b4b4;
+margin: 2.0em 0em 2.0em 0em;
+}
+
+#header
+{
+position: relative;
+width: 100%;
+height: 9.0em;
+background: #2B2B2B url('images/header.jpg') repeat-x; /* white header picture background */
+margin-bottom: 2px;
+}
+
+#headercontent
+{
+position: relative;
+bottom: 0em;
+padding: 0em 2.0em 1.3em 2.0em;
+}
+
+#headercontent h1
+{
+font-weight: normal;
+color: #000000;
+font-size: 3.5em;
+}
+
+#headercontent h1 sup
+{
+color: #3c3c3c;
+}
+
+#headercontent h2
+{
+font-size: 1.0em;
+font-weight: normal;
+color: #3c3c3c; /* header small text font colour */
+}
+
+#menubottom
+{
+background: rgb(147, 197, 114, 0.2); /* border top and bottom */
+height: 14px;
+margin-bottom: 1.5em;
+}
+
+#logincontainer /* do we use this? might need to remove */
+{
+  margin-top: 1.5em;
+  float: middle;
+  width: 20.0em;
+}
+
+/* form css */
+
+input[type=submit] { /* button css */
+  background-color: rgb(80, 110, 62);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(111, 150, 86);
+}
+
+input [type="text"] { /* text area input css */
+  margin: 100px auto;
+}
+
+/* footer */
+
+#footer
+{
+position: relative;
+height: 2.0em;
+clear: both;
+padding-top: 5.0em;
+background: rgb(147, 197, 114, 0.2); /* border top and bottom */
+font-size: 0.8em;
+}
+
+#footer .left
+{
+position: absolute;
+left: 2.0em;
+bottom: 1.2em;
+}
+
+#footer .right
+{
+position: absolute;
+right: 2.0em;
+bottom: 1.2em;
+}
+
+/* nav bar pretty css */
+.navtop {
+  background-color: rgb(147, 197, 114, 0.6); /* navigation colour header colour - Pistachio */
+  height: 60px;
+  width: 100%;
+  border: 0;
+}
+.navtop div {
+  display: flex;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+}
+.navtop div h1, .navtop div a {
+  display: inline-flex;
+  align-items: center;
+}
+.navtop div h1 {
+  flex: 1;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-weight: normal;
+}
+.navtop div a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+.navtop div a i {
+  padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+  color: #4a5a52;
+}
+
+
+
+
