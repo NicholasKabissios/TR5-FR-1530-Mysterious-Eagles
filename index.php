@@ -78,7 +78,7 @@ session_start();
 
 				<div class="post">
 					<div class="contentarea">
-						<div class="details">Posted by <a href="#">Jane Doe</a> - Location</div> <!-- we will link location the way name is linked -->
+						<div class="details">Posted by <?php echo $_SESSION['USERS']; ?> - Location</div> <!-- we will link location the way name is linked -->
             <!-- inset like button here
                 insert star rating here -->
 						<p>Volutpat at varius sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis. Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor. Aenean felis. Quisque eros. Cras lobortis commodo metus. Vestibulum vel purus. In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet.</p>
