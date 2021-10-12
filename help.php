@@ -28,13 +28,8 @@ session_start();
 
 		<div id="login-info">
 
-		<?php 
-		if (!isset($_SESSION['USERS']))
-		{
-			echo "Not logged in.";
-		} else {
-			echo $_SESSION['USERS']; 
-		}
+		<?php require_once('includes/login-info.php'); ?>
+
 		?>
 
 		<a id="menu" href="logout.php" <?php if(!isset($_SESSION['USERS'])){echo " style='display: none'"; }?>>Logout</a>

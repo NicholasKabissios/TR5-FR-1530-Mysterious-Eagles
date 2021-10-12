@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (isset($_SESSION['USRNAME'])) { 
+    $usrname = $_SESSION['USRNAME']; 
+}
 $host = 'rmit.australiaeast.cloudapp.azure.com';
 $user = 'mysterious_eagles';
 $password = 'abc123';
@@ -53,6 +56,7 @@ if (isset($_GET['page_id'])) {
 } else {
     exit('Please provide the page ID.');
 }
+
 ?>
     
 <div class="overall_rating">
@@ -63,7 +67,7 @@ if (isset($_GET['page_id'])) {
 <a href="#" class="write_review_btn">New Review</a><br></br>
 <div class="write_review">
     <form>
-        <input name="name" type="text" placeholder="Your Name" required>
+        <input required name="name" type="text" <?php if(isset($usrname)) { echo "value=$usrname"; } else { echo "placeholder='Enter your name'"; } ?>>
         <input name="rating" type="number" min="1" max="5" placeholder="Rating (1-5)" required>
         <textarea name="content" placeholder="Write your review here..." required></textarea>
         <button type="submit">Submit</button>

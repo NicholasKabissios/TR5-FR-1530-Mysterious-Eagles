@@ -22,18 +22,8 @@ session_start();
 
 		<div id="login-info">
 
-			<?php 
-		if (!isset($_SESSION['USERS']))
-		{
-			echo "Not logged in.";
-		} else {
-			echo $_SESSION['USERS']; 
-		}
-		?>
-
-			<a class="navtop" href="logout.php"
-				<?php if(!isset($_SESSION['USERS'])){echo " style='display: none'"; }?>>Logout</a>
-
+			<?php require_once('includes/login-info.php'); ?>
+			
 		</div> <!-- login-info div end -->
 
 	</div> <!-- header div end -->
