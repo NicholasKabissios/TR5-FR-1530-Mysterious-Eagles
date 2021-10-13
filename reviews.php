@@ -59,11 +59,6 @@ if (isset($_GET['page_id'])) {
 
 ?>
     
-<div class="overall_rating">
-    <span class="num"><?=number_format($reviews_info['overall_rating'], 1)?></span>
-    <span class="stars"><?=str_repeat('&#9733;', round($reviews_info['overall_rating']))?></span>
-    <span class="total"><?=$reviews_info['total_reviews']?> reviews</span>
-</div>
 <a href="#" class="write_review_btn">New Review</a><br></br>
 <div class="write_review">
     <form>
