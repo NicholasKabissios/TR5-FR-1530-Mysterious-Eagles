@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
 	$email = !empty($_POST['email']) ? trim($_POST['email']) : null;
 	$passwordAttempt = !empty($_POST['pword']) ? trim($_POST['pword']) : null;
 
-	$sql = "SELECT Username, Email, Password FROM USERS WHERE Email = :email";
+	$sql = "SELECT Name, Username, Email, Password FROM USERS WHERE Email = :email";
 	$stmt = $pdo->prepare($sql);
 
 	$stmt->bindValue(':email', $email);
@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
 			session_start();
 			$_SESSION['USERS'] = $email;
 			$_SESSION['USRNAME'] = $user['Username'];
+			$_SESSION['NAME'] = $user['Name'];
 			echo '<script>window.location.replace("index.php");</script>';
 			exit;
 		}
