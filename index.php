@@ -34,7 +34,7 @@ session_start();
 	<div id="menubottom"></div> <!-- border between nav bar and content, very small, 2px approx -->
 
 	<div class="content home">
-		<h2>Reviews</h2>
+		<h2>Home</h2>
 		<div class="reviews"></div><br></br>
 		<script>
 			const reviews_page_id = 1;
