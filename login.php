@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
 	$email = !empty($_POST['email']) ? trim($_POST['email']) : null;
 	$passwordAttempt = !empty($_POST['pword']) ? trim($_POST['pword']) : null;
 
-	$sql = "SELECT Name, Username, Email, Password FROM USERS WHERE Email = :email";
+	$sql = "SELECT * FROM USERS WHERE Email = :email";
 	$stmt = $pdo->prepare($sql);
 
 	$stmt->bindValue(':email', $email);
@@ -30,7 +30,8 @@ if (isset($_POST['submit'])) {
 			session_start();
 			$_SESSION['USERS'] = $email;
 			$_SESSION['USRNAME'] = $user['Username'];
-			$_SESSION['NAME'] = $user['Name'];
+			$_SESSION['FULLNAME'] = $user['Name'];
+			$_SESSION['BIO'] = $user['Bio'];
 			echo '<script>window.location.replace("index.php");</script>';
 			exit;
 		}
@@ -62,10 +63,6 @@ if (isset($_POST['submit'])) {
 
 			<?php require_once('includes/login-info.php'); ?>
 
-		?>
-
-				<a class="navtop" href="logout.php"
-					<?php if(!isset($_SESSION['USERS'])){echo " style='display: none'"; }?>>Logout</a>
 			</div> <!-- end of login-info -->
 		</div> <!-- end of div header -->
 

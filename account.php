@@ -1,7 +1,16 @@
 <?php
 session_start();
-if (isset($_SESSION['Name'])) { 
-    $usrname = $_SESSION['Name']; 
+if (isset($_SESSION['FULLNAME'])) { 
+    $name = $_SESSION['FULLNAME']; 
+}
+if (isset($_SESSION['USRNAME'])) { 
+    $usrname = $_SESSION['USRNAME']; 
+}
+if (isset($_SESSION['USERS'])) { 
+	$email = $_SESSION['USERS'];
+}
+if (isset($_SESSION['BIO'])) { 
+	$bio = $_SESSION['BIO'];
 }
 ?>
 
@@ -39,22 +48,20 @@ if (isset($_SESSION['Name'])) {
 	<div class="content home">
 		<h2>Account</h2>
 
-		                   <div>
-							Username: <?php if(isset($usrname)) { echo "value=$usrname"; } else { echo "Not logged in"; } ?>
+		                <div>
+							Username: <?php if(isset($usrname)) { echo "$usrname"; } else { echo "Not logged in"; } ?>
 						</div><br></br>
 
 						<div>
-							Name: <?php if(isset($name)) { echo "value=$name"; } else {echo " style='display: none'"; } ?>
+							Name: <?php if(isset($name)) { echo "$name"; } else { echo " style='display: none'"; } ?>
 						</div><br></br>
 
 						<div>
-							Email: <div id="login-info">
-			<?php require_once('includes/login-info.php'); ?>
-		</div>
+							Email: <?php if(isset($email)) {echo $email; } else { echo " style='display: none'"; } ?>
 						</div><br></br>
 
 						<div>
-							Bio:
+							Bio: <?php if(isset($_SESSION['BIO'])) {echo $_SESSION['BIO']; } else if(!isset($email)) { echo " style='display: none'"; } else { echo "Empty bio."; }?>
 						</div><br></br>
 
 						<form method="GET" action="editprofile.php">
