@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 
 <html>
+	<script>
+		// API Key 
+		let map; google.maps.Map;
+
+	    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -27, lng: 133 },
+        zoom: 4,
+  });
+}
+		
+	</script>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <meta name="keywords" content="" />
@@ -29,9 +41,9 @@
 			<li><a href="map.html" class="active">Map</a></li>
 			<li><a href="#">New Post</a></li>
 			<li><a href="account.html">Account</a></li>
-			<li><a href="#">Liked Posts</a></li>
 			<li><a href="help.html">Help</a></li>
 			<li><a href="login.html">Log In</a></li>
+			<li><a href="signup.html">Sign Up</a></li>
 		</ul>
 	</div>
 	<div id="menubottom"></div> <!-- border between nav bar and content, very small, 2px approx -->
@@ -48,6 +60,19 @@
 		<div id="primarycontainer">
 			<div id="primarycontent">
 				<!-- Primary content area start -->
+				<h3>Map</h3><br></br>
+
+				<div id="map" style="width: 100%; height: 600px; position: relative; overflow: hidden;">  </div>
+				
+
+				<!-- insert myMap here -->
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACWrCR8nQ6u8sIW7E0XXSpDRCoxywjXFE&callback=initMap"; defer="" ;async=""> 
+				async
+				</script>
+
+				
+			   
+			 
 
 				<!-- map element goes here -->
 
