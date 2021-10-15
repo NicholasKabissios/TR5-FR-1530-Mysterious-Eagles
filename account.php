@@ -49,19 +49,19 @@ if (isset($_SESSION['BIO'])) {
 		<h2>Account</h2>
 
 		                <div>
-							Username: <?php if(isset($usrname)) { echo "$usrname"; } else { echo "Not logged in"; } ?>
+							Username: <?php if(isset($usrname)) { echo "$usrname"; } else { echo "Not logged in."; } ?>
 						</div><br></br>
 
 						<div>
-							Name: <?php if(isset($name)) { echo "$name"; } else { echo " style='display: none'"; } ?>
+							Name: <?php if(isset($name)) { echo "$name"; } else { echo " "; } ?>
 						</div><br></br>
 
 						<div>
-							Email: <?php if(isset($email)) {echo $email; } else { echo " style='display: none'"; } ?>
+							Email: <?php if(isset($email)) {echo $email; } else { echo " "; } ?>
 						</div><br></br>
 
 						<div>
-							Bio: <?php if(isset($_SESSION['BIO'])) {echo $_SESSION['BIO']; } else if(!isset($email)) { echo " style='display: none'"; } else { echo "Empty bio."; }?>
+							Bio: <?php if(isset($_SESSION['BIO'])) {echo $_SESSION['BIO']; } else if(!isset($email)) { echo " "; } else { echo "Empty bio."; }?>
 						</div><br></br>
 
 						<form method="GET" action="editprofile.php">
